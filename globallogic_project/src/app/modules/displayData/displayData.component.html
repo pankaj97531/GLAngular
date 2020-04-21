@@ -1,0 +1,23 @@
+<h1>{{title}}</h1>
+<h2>My fav day is: {{myDay.name}}</h2>
+<p>Days:</p>
+<ul>
+    <li *ngFor="let day of days">
+        {{ day.id }}
+    </li>
+</ul>
+
+<!-- <input [(ngModel)]="username">
+
+<p>Hello {{username}}!</p> -->
+
+
+<!-- <input [value]="username ? username :''" (input)="username = $event.target.value">
+
+<p>Hello {{username}}!</p> -->
+
+<!-- <input [ngModel]="username ? username :''" (ngModelChange)="username = $event">
+
+<p>Hello {{username}}!</p> -->
+
+<!-- <button (click)="showValue($event)">show the value</button> -->

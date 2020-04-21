@@ -1,0 +1,31 @@
+<h1>Forms Sample</h1>
+<div class="container">
+    <form #userForms="ngForm" (ngSubmit)="saveData()">
+
+        {{userForms.value | json}}
+
+        <hr>
+        {{userModel | json}}
+        <div class="form-group">
+
+            <label for="clientName">Name</label>
+            <input required [(ngModel)]='userModel.name' #clientName="ngModel" name="clientName" type="text" class="form-control"
+                [class.is-invalid]='!clientName.value' id="clientName">
+                
+            <div class="alert alert-danger" *ngIf="!clientName.value">Name is required !</div>
+        </div>
+
+        <div class="form-group">
+
+            <label for="mobile">Mobile</label>
+            <input required [(ngModel)]='userModel.mobile' #mobile='ngModel' name="mobile" pattern="^\d{10}$" type="text"
+                [class.is-invalid]='mobile.invalid && mobile.touched' class="form-control" id="mobile">
+
+            <div class="alert alert-danger" *ngIf='mobile.invalid && mobile.touched'>Mobile number should be 10 digit
+            </div>
+        </div>
+
+        <button [disabled]="userForms.form.invalid"  type="submit" class="btn btn-success">Submit</button>
+
+    </form>
+</div>

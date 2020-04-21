@@ -1,0 +1,26 @@
+<h2>Directive | *ngIF, *ngFor, *ngSwitch and Custom Directive</h2>
+<!-- <div *ngFor='let m of months'>
+    <a *ngIf="m=='Jan'">{{m}}</a>
+</div>  -->
+<!-- <hr>
+
+<div *ngFor='let m of months'>
+    <a [ngStyle]="{'background-color':m === 'Jan' ? 'green' : 'red' }">{{m}}</a>
+</div> -->
+
+<!-- <hr>
+<div *ngFor='let m of months'>
+    <a [ngClass]="{'textRed':m === 'Jan' }">{{m}}</a>
+    <a [ngClass]="(m === 'Jan') ? 'textGreen' : 'textRed' ">{{m}}</a>
+</div> -->
+
+<!-- <hr>
+<div [ngSwitch]="months[2]">
+    <div *ngSwitchCase="'Jan'">Jan</div>
+    <div *ngSwitchCase="'Feb'">Feb</div>
+    <div *ngSwitchCase="'March'">Mar</div>
+    <div *ngSwitchDefault>NA</div>
+</div> -->
+
+<!-- <p>Today's date is {{ todayDate | date:'medium' | lowercase }} </p> -->
+<p highlight color = '{{someColor}}' > {{10 | powerPipe : 2 : 4}}</p>
